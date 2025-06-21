@@ -23,18 +23,32 @@ var freeMemory = os.freemem();
 console.log(`Total Memory:${totalMemory}`);
 console.log(`Free Memory: ${freeMemory}`);
 
-
+// synchronous
 const fs = require('fs')
-const files = fs.readdirSync('./')
-console.log(files);
+//  
 
-
+// asychronous
 fs.readdir('./', function(err, files){
     if(err) console.log('error', err);
     else console.log('result', files);
     
     
 });
+
+
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+// register a event
+emitter.on('messageLogged', (arg)=>{
+    console.log('listner called ', arg);
+    
+})
+
+// Raise an event
+emitter.emit('messageLogged', {id: 1, url: 'https://'});
+// making a noise or produce something
+
 
 
 

@@ -1,4 +1,8 @@
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
 var url = 'http://mylogger.io/log';
+
 
 function log(message){
     // send http request
