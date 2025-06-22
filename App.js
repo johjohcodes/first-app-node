@@ -49,6 +49,17 @@ emitter.on('messageLogged', (arg)=>{
 emitter.emit('messageLogged', {id: 1, url: 'https://'});
 // making a noise or produce something
 
+const http = require('http');
+// create a server
+ const server = http.createServer()
 
+ server.on('connection', (socket)=>{
+    console.log('new connection....');
+ })
+
+ server.listen(3000);
+
+ console.log('listening on port 3000...');
+ 
 
 
