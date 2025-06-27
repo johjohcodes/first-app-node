@@ -51,7 +51,6 @@ emitter.emit('messageLogged', {id: 1, url: 'https://'});
 
 const http = require('http');
 // create a server
- const server = http.createServer()
 
  server.on('connection', (socket)=>{
     console.log('new connection....');
