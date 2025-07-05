@@ -24,4 +24,10 @@ Logger.on('messageLogged', (arg)=>{
 const log = require('./logger');
 log('message')
 
- 
+function logUserCredentials(username, password) {
+    // You can add logic to log or process the credentials here
+    console.log(`Username: ${username}, Password: ${password}`);
+}
+
+module.exports = logUserCredentials;
+
