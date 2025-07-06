@@ -100,3 +100,37 @@ setTimeout(() => {
         });
 }, 2000); 
 
+const Rock = 'Rock';
+const Paper = 'Paper';
+const Scissors = 'Scissors';
+
+const getRandomChoice = () => {
+    const choices = [Rock, Paper, Scissors];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+}
+const playRound = (playerChoice) => {
+    const computerChoice = getRandomChoice();
+    console.log(`Player chose: ${playerChoice}`);
+    console.log(`Computer chose: ${computerChoice}`);
+
+    if (playerChoice === computerChoice) {
+        return 'It\'s a tie!';
+    } else if (
+        (playerChoice === Rock && computerChoice === Scissors) ||
+        (playerChoice === Paper && computerChoice === Rock) ||
+        (playerChoice === Scissors && computerChoice === Paper)
+    ) {
+        return 'Player wins!';
+    } else {
+        return 'Computer wins!';
+    }
+};
+const playerChoice = Rock; // You can change this to Paper or Scissors
+console.log(playRound(playerChoice));
+const playGame = (playerChoice) => {
+    const result = playRound(playerChoice);
+    console.log(result);
+};
+playGame(playerChoice);
+
