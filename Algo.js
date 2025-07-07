@@ -1,28 +1,30 @@
-function getMin(number){
-    if (number.length === 0) {
-        throw new erro ('Array cannot be empty');
+// const { log } = require("console");
 
-    }
-    if (number.length === 1) {
-        return number[0];
-    }
+// function getMin(number){
+//     if (number.length === 0) {
+//         throw new erro ('Array cannot be empty');
 
-    for(let i = 1; i < number.length; i++){
-        if (number[i]< min){
-            min  = number[i]
-        }
-    }
-    let min = number[0]
+//     }
+//     if (number.length === 1) {
+//         return number[0];
+//     }
+
+//     for(let i = 1; i < number.length; i++){
+//         if (number[i]< min){
+//             min  = number[i]
+//         }
+//     }
+//     let min = number[0]
 
 
-    return min;
-}
+//     return min;
+// }
 
-const arryNumber = [9,4,3,5]
+// const arryNumber = [9,4,3,5]
 
-const currentMin = getMin(arryNumber);
+// const currentMin = getMin(arryNumber);
 
-console.log(currentMin);
+// console.log(currentMin);
 
 
 function isPrime(n) {
@@ -56,5 +58,42 @@ function meanOfRandomPrimes(count = 5) {
 
 const mean = meanOfRandomPrimes();
 console.log("Mean of 5 random primes:", mean);
+
+
+
+function min2(numbers){
+    if(! numbers.length){
+        throw new error ('cannot be empty')
+    }
+
+    
+
+    for (let i = 0; i < numbers.length; i++) {
+        outterElement = numbers[i]
+        for(let j =0; j < numbers.length; j++){
+            innerElement = numbers[j]
+
+            if(outterElement> innerElement){
+            outterElement = numbers[j]
+            innerElement = numbers[i]
+
+            outterElement = numbers[i]
+            innerElement = numbers[j]
+            
+        }
+        
+        }
+        
+    }
+
+    return numbers;
+    
+}
+
+const theNumbers = [4, 3, 5, 1]
+  const minimum = min2(theNumbers)
+
+ console.log(minimum);
+ 
 
 
