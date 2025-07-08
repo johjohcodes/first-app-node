@@ -134,3 +134,62 @@ const playGame = (playerChoice) => {
 };
 playGame(playerChoice);
 
+
+function getCardValue(card) {
+    if (['J', 'Q', 'K'].includes(card)) return 10;
+    if (card === 'A') return 11;
+    return card;
+}
+
+function calculateHandValue(hand) {
+    let value = 0;
+    let aceCount = 0;
+    for (let card of hand) {
+        value += getCardValue(card);
+        if (card === 'A') aceCount++;
+    }
+    // Adjust for aces
+    while (value > 21 && aceCount > 0) {
+        value -= 10;
+        aceCount--;
+    }
+    return value;
+}
+
+function getRandomCard() {
+    const cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'];
+    return cards[Math.floor(Math.random() * cards.length)];
+}
+
+function playBlackjack() {
+    let playerHand = [getRandomCard(), getRandomCard()];
+    let dealerHand = [getRandomCard(), getRandomCard()];
+
+    let playerValue = calculateHandValue(playerHand);
+    let dealerValue = calculateHandValue(dealerHand);
+
+    // Player turn: simple strategy (hit if under 17)
+    while (playerValue < 17) {
+        playerHand.push(getRandomCard());
+        playerValue = calculateHandValue(playerHand);
+    }
+
+    // Dealer turn: must hit until 17 or more
+    while (dealerValue < 17) {
+        dealerHand.push(getRandomCard());
+        dealerValue = calculateHandValue(dealerHand);
+    }
+
+    console.log(`Player hand: ${playerHand.join(', ')} (value: ${playerValue})`);
+    console.log(`Dealer hand: ${dealerHand.join(', ')} (value: ${dealerValue})`);
+
+    if (playerValue > 21) return 'Player busts! Dealer wins!';
+    if (dealerValue > 21) return 'Dealer busts! Player wins!';
+    if (playerValue > dealerValue) return 'Player wins!';
+    if (dealerValue > playerValue) return 'Dealer wins!';
+    return 'It\'s a tie!';
+}
+
+// To play a game of blackjack, uncomment the line below:
+// console.log(playBlackjack());
+
