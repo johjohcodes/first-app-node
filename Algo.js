@@ -8,13 +8,14 @@
 //     if (number.length === 1) {
 //         return number[0];
 //     }
+//        let min = number[0]
 
 //     for(let i = 1; i < number.length; i++){
 //         if (number[i]< min){
 //             min  = number[i]
 //         }
 //     }
-//     let min = number[0]
+//     
 
 
 //     return min;
