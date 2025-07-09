@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>algorithim</title>
-    <script src="Algo.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; background: #222; color: #fff; text-align: center; }
+        .cards { margin: 10px 0; }
+        button { margin: 5px; padding: 10px 20px; font-size: 16px; }
+        .result { font-size: 1.2em; margin-top: 15px; }
+    </style>
+    <script src="play.js"></script>
 </head>
 <body>
-    
+    <h1>Blackjack Game</h1>
+    <div>
+        <div>
+            <strong>Player Hand:</strong>
+            <span id="player-cards" class="cards"></span>
+            (<span id="player-value"></span>)
+        </div>
+        <div>
+            <strong>Dealer Hand:</strong>
+            <span id="dealer-cards" class="cards"></span>
+            (<span id="dealer-value"></span>)
+        </div>
+    </div>
+    <div>
+        <button id="hit-btn">Hit</button>
+        <button id="stand-btn">Stand</button>
+        <button id="restart-btn">Restart</button>
+    </div>
+    <div class="result" id="result"></div>
 </body>
 </html>
