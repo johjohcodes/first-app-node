@@ -1,104 +1,104 @@
-const { log } = require("console");
+// const { log } = require("console");
 
-let name = 'maximum';
-let description = 'You are a software engineer at a tech company. Your task is to write a function that takes an array of integers and returns the maximum value in the array. The function should handle edge cases such as an empty array or an array with negative numbers.';
-const hasHobbies = true;
+// let name = 'maximum';
+// let description = 'You are a software engineer at a tech company. Your task is to write a function that takes an array of integers and returns the maximum value in the array. The function should handle edge cases such as an empty array or an array with negative numbers.';
+// const hasHobbies = true;
 
-const allUser = () =>{
-    return {
-        name: name,
-        description: description,
-        hasHobbies: hasHobbies
-    }
-}
+// const allUser = () =>{
+//     return {
+//         name: name,
+//         description: description,
+//         hasHobbies: hasHobbies
+//     }
+// }
 
-function summary(userName, userDescription){
-    return {
-        summary: 'name is ' + userName + ' and description is ' + userDescription
-    }
+// function summary(userName, userDescription){
+//     return {
+//         summary: 'name is ' + userName + ' and description is ' + userDescription
+//     }
     
-}
+// }
 
-log(summary(name, description));
+// log(summary(name, description));
 
-console.log(allUser());
-
-
-const add = (a, b) =>  a + b;
-const addone = a => a + 1;
-const addRandom = () => Math.random() * 10;
-
-const person = {
-    name: 'maximum',
-    age: 30,
-    greet() {
-        console.log('Hello, my name is ' + this.name);
-    }
-}
-
-person.greet();
-
-const hobbies = ['Sports', 'Cooking', 1, true];
-for (let hobby of hobbies) {
-    console.log(hobby);
-}
+// console.log(allUser());
 
 
-console.log(hobbies.map(hobby => 'Hobby:'+ hobby));
-console.log((hobbies));
+// const add = (a, b) =>  a + b;
+// const addone = a => a + 1;
+// const addRandom = () => Math.random() * 10;
 
-hobbies.push('Programming');
+// const person = {
+//     name: 'maximum',
+//     age: 30,
+//     greet() {
+//         console.log('Hello, my name is ' + this.name);
+//     }
+// }
 
-const copiedArray = [...hobbies]
-console.log(copiedArray);
+// person.greet();
 
-const toArray = (...arg) => {
-    return arg;
-}
-
-console.log(toArray(1, 2,3,4));
+// const hobbies = ['Sports', 'Cooking', 1, true];
+// for (let hobby of hobbies) {
+//     console.log(hobby);
+// }
 
 
-const printName = ({name}) => {
-    console.log(name);
+// console.log(hobbies.map(hobby => 'Hobby:'+ hobby));
+// console.log((hobbies));
+
+// hobbies.push('Programming');
+
+// const copiedArray = [...hobbies]
+// console.log(copiedArray);
+
+// const toArray = (...arg) => {
+//     return arg;
+// }
+
+// console.log(toArray(1, 2,3,4));
+
+
+// const printName = ({name}) => {
+//     console.log(name);
     
-}
+// }
 
-printName(person)
+// printName(person)
 
-const { name: personName, age } = person;
-console.log(personName, age);
+// const { name: personName, age } = person;
+// console.log(personName, age);
 
-// async becus it doesnt execute immediatly
-setTimeout(() => {
-    console.log('Timer is done!');
-}, 2000
+// // async becus it doesnt execute immediatly
+// setTimeout(() => {
+//     console.log('Timer is done!');
+// }, 2000
 
-)
+// )
 
-const fetchData = callback => {
-    const promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('Done!');
-        }, 1500);
-    });
+// const fetchData = callback => {
+//     const promise = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve('Done!');
+//         }, 1500);
+//     });
 
-    return promise;
-};
+//     return promise;
+// };
 
 
-setTimeout(() => {
+// setTimeout(() => {
 
-    console.log('Timer is done!');
-    fetchData()
-        .then(text => {
-            console.log(text);
-            return fetchData();
-        })
-        .then(text2 => {
-            console.log(text2);
-        });
-}, 2000); 
+//     console.log('Timer is done!');
+//     fetchData()
+//         .then(text => {
+//             console.log(text);
+//             return fetchData();
+//         })
+//         .then(text2 => {
+//             console.log(text2);
+//         });
+// }, 2000); 
 
 // const Rock = 'Rock';
 // const Paper = 'Paper';
