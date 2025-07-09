@@ -193,6 +193,15 @@
 // // To play a game of blackjack, uncomment the line below:
 // // console.log(playBlackjack());
 
+function setupBlackjackUI() {
+    // Check if running in browser and elements exist
+    if (
+        typeof document === 'undefined' ||
+        !document.getElementById('hit-btn')
+    ) {
+        return;
+    }
+
 const cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'];
         let playerHand = [];
         let dealerHand = [];
@@ -300,3 +309,8 @@ const cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'];
 
         // Start the game on page load
         restartGame();
+    }
+
+    if (typeof window !== 'undefined') {
+    window.onload = setupBlackjackUI;
+}
