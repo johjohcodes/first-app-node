@@ -29,3 +29,42 @@ for (let i = 0; i < maxArry.length; i++) {
   
   console.log(max);
 
+
+  const ROCK = 'rock'
+  const SCISSORS = 'scissors'
+  const PAPER = 'paper'
+
+  function playerMove(ROCK, SCISSORS, PAPER){
+      if (condition) {
+        
+      }
+  }
+
+  function computerMove(){
+      let random = Math.random()
+      if (random > 1/3) {
+         console.log('paper');
+
+         
+      } else if (random > 2/3){
+        console.log('rock');
+        
+    
+      }  else {
+        console.log('scissors');
+        
+      }
+      console.log(random);
+      
+  }
+  computerMove()
+
+
+
+  // there will be a startgame function
+  // playerMove function
+  // computerMove function
+
+
+
+
