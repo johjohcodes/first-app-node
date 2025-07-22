@@ -1,5 +1,5 @@
 body {
-    background: radial-gradient(circle at 60% 40%, #1a2980 0%, #26d0ce 100%);
+    background: radial-gradient(circle at 60% 40%, #ff512f 0%, #dd2476 100%);
     color: #f8f8f8;
     font-family: 'Montserrat', Arial, sans-serif;
     min-height: 100vh;
@@ -14,39 +14,39 @@ h1 {
     margin-top: 30px;
     font-size: 2.7em;
     letter-spacing: 3px;
-    color: #ffecb3;
-    text-shadow: 0 0 18px #26d0ce, 2px 2px 8px #222;
+    color: #fff176;
+    text-shadow: 0 0 18px #dd2476, 2px 2px 8px #222;
     animation: shine 2.5s infinite alternate;
 }
 @keyframes shine {
-    from { text-shadow: 0 0 18px #26d0ce, 2px 2px 8px #222; }
-    to { text-shadow: 0 0 36px #1a2980, 2px 2px 16px #222; }
+    from { text-shadow: 0 0 18px #dd2476, 2px 2px 8px #222; }
+    to { text-shadow: 0 0 36px #ff512f, 2px 2px 16px #222; }
 }
 .game-container {
-    background: rgba(38, 208, 206, 0.12);
+    background: rgba(221, 36, 118, 0.13);
     border-radius: 22px;
-    box-shadow: 0 12px 40px 0 rgba(26, 41, 128, 0.25);
+    box-shadow: 0 12px 40px 0 rgba(255, 81, 47, 0.18);
     max-width: 440px;
     margin: 40px auto 0 auto;
     padding: 36px 28px 28px 28px;
-    border: 2px solid #26d0ce;
+    border: 2px solid #fff176;
 }
 .cards {
     margin: 12px 0;
     font-size: 1.4em;
     letter-spacing: 2px;
-    color: #ffecb3;
-    text-shadow: 0 0 8px #26d0ce;
+    color: #fff176;
+    text-shadow: 0 0 8px #dd2476;
     animation: fadeIn 1s;
 }
 .hand-label {
     font-weight: bold;
-    color: #26d0ce;
+    color: #ff512f;
     font-size: 1.15em;
     letter-spacing: 1px;
 }
 .hand-value {
-    color: #ffecb3;
+    color: #fff176;
     font-weight: bold;
     font-size: 1.1em;
 }
@@ -56,31 +56,31 @@ button {
     font-size: 1.15em;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+    background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
     color: #fff;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 2px 12px rgba(26,41,128,0.18);
+    transition: background 0.3s, transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+    box-shadow: 0 2px 12px rgba(221,36,118,0.18);
     position: relative;
     overflow: hidden;
 }
 button:hover {
-    background: linear-gradient(90deg, #26d0ce 0%, #1a2980 100%);
-    transform: scale(1.08) rotate(-2deg);
-    box-shadow: 0 4px 24px rgba(38,208,206,0.25);
+    background: linear-gradient(90deg, #dd2476 0%, #ff512f 100%);
+    transform: scale(1.08) rotate(360deg);
+    box-shadow: 0 4px 24px rgba(255,81,47,0.25);
 }
 button:active {
-    background: linear-gradient(90deg, #ffecb3 0%, #26d0ce 100%);
+    background: linear-gradient(90deg, #fff176 0%, #ff512f 100%);
     color: #222;
 }
 .result {
     font-size: 1.5em;
     margin-top: 28px;
-    color: #ffecb3;
+    color: #fff176;
     font-weight: bold;
     min-height: 36px;
-    text-shadow: 1px 1px 8px #1a2980, 0 0 12px #26d0ce;
+    text-shadow: 1px 1px 8px #ff512f, 0 0 12px #dd2476;
     animation: fadeIn 1s;
 }
 @keyframes fadeIn {
